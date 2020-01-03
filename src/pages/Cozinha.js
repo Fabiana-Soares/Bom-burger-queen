@@ -1,8 +1,9 @@
 import React from 'react';
+import { tsPropertySignature } from '@babel/types';
 
-function Cozinha(){
+function Cozinha(props){
     return(
-        <div>pedidos</div>
+        <div>Pedidos</div>
     );
 }
 

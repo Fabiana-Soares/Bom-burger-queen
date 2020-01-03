@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Nav(){
-    return(
-        <nav>
+function Nav(props){
+  return(
+    <nav>
       <ul>
         <li>
           <Link to="/salao">Cozinha</Link>
@@ -13,5 +13,6 @@ function Nav(){
         </li>
       </ul>
     </nav>
-    );
+    )
 }
+export default Nav;

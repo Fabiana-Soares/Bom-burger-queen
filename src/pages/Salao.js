@@ -11,7 +11,6 @@ function Salao()  {
         .then(snapshot =>{
             snapshot.forEach(doc => {
                 setMenu((currentState)=> [...currentState, doc.data()]);
-                //doc.data()
             });
         })
    }, []);
