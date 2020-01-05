@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import db from '../utils/configfirebase';
+import db from '../utils/configfirebase'
 import MenuCard from '../components/MenuCard';
-
+import Button from "../components/Button/button";
 
 function Salao()  {
-    const [menu, setMenu] = useState([]);
 
-   useEffect(()=>{
-       db.collection('menu').get()
-        .then(snapshot =>{
-            snapshot.forEach(doc => {
-                setMenu((currentState)=> [...currentState, doc.data()]);
-            });
-        })
-   }, []);
+    const[menu, setMenu] = useState([]);
 
+    useEffect(()=>{
+        db.collection('menu').get()
+                .then(snapshot => {
+                    snapshot.forEach(doc => {
+                        setMenu((currentState)=> [...currentState, doc.data()]); 
+                    });
+                })
+    }, []);
+      
+      console.log(menu);
 
     return(
-        <div>
-          {menu.map(menuItem => 
-              <MenuCard name={menuItem.name} price={menuItem.price} handleClick={() => console.log(menuItem)}/> //quanto a tag comeca com letra maiuscula isso eh um componente
-            
+      <div>
+        {menu.map(menuItem => 
+            <MenuCard name={menuItem.name} price={menuItem.price} onClick={() => console.log(menuItem)}/>
+        
         )}
-            
-            </div>
+        </div>
     );
 }
 

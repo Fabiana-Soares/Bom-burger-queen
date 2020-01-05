@@ -1,18 +1,20 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Logo from "../img/logo.png";
+// import './styles.css';
 
 function Nav(props){
   return(
-    <nav>
+    <nav className="main-header">
       <ul>
-        <li>
-          <Link to="/salao">Cozinha</Link>
-        </li>
-        <li>
-          <Link to="/cozinha">Salao</Link>
-        </li>
+      <img width={"50px"}  src={Logo} alt ='Logo Burger Queen' />
+       <ul> BURGER QUEEN</ul>
       </ul>
-    </nav>
-    )
+        <Link className="links"></Link>
+          <Link to="/Home"  className="links" >Home</Link>
+          <Link to="/Salao"  className="links">Salao</Link>
+          <Link to="/Kitchen"  className="links">Cozinha</Link> 
+      </nav>
+    );
 }
 export default Nav;
