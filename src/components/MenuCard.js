@@ -2,10 +2,10 @@ import React from 'react';
 
 function MenuCard(props) {
     return(
-        <section onClick={props.onClick}>
+        <button onClick={props.onClick}>
             <p>{props.name}</p>
             <p>{props.price}</p>
-        </section>
+        </button>
     )
 }
 export default MenuCard;

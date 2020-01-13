@@ -1,9 +1,13 @@
 import React from 'react';
+// import Salao from '../pages/Salao';
 
 
 function Home(){
     return(
-        <div>Sobre o Restaurante</div>
+        <div>
+            <h1>Menu</h1>
+            
+            </div>
     );
 }
 
