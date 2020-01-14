@@ -1,9 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Salao from './pages/Salao';
-import Kitchen from './pages/Kitchen';
-import Home from './pages/Home';
+import Salao from './pages/Salao/Salao';
+import Kitchen from './pages/Kitchen/Kitchen';
+import Home from './pages/Home/Home';
 import Nav from './components/Nav';
+
 
 
 
@@ -11,7 +12,7 @@ function App() {
     
    return (
     <Router>
-      <Nav/>
+      <Nav />
        <div>
         <Switch>
           <Route path="/Kitchen" component={Kitchen}/>
@@ -22,5 +23,6 @@ function App() {
   </Router>
    );
 }
+
 
 export default App;
