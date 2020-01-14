@@ -1,68 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Burger Queen
 
-## Available Scripts
+#### [História de usuário 1] Cliente deve poder anotar o seu pedido
 
-In the project directory, you can run:
+Eu como cliente quero poder anotar o meu pedido saber o valor de cada 
+produto e poder enviar o pedido para a cozinha para ser preparado.
 
-### `npm start`
+##### Critérios de aceitação
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O que deve acontecer para satisfazer as necessidades do usuário?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Anotar o nome e mesa.
+* Adicionar produtos aos pedidos.
+* Excluir produtos.
+* Ver resumo e o total da compra.
+* Enviar o pedido para a cozinha (guardar em algum banco de dados).
+* Funcionar bem e se adequar a um _tablet_.
 
-### `npm test`
+##### Definição de pronto
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O acordado abaixo deve acontecer para dizer que a história está terminada:
 
-### `npm run build`
+* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+* Você deu deploy de seu aplicativo.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Protótipos e layout
+Baseado nas necessidades do cliente, criamos um layout no qual pode-se visualizar todos os itens necessários e também à funcionalidade do botão (excluir, adicionar, etc).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![MENU](src/img/prototipo.png)
 
-### `npm run eject`
+#### Framework / biblioteca
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### React Hooks
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* [Entendendo React Hooks](https://medium.com/@higornevesmarques/entendendo-react-hooks-2c0efae276a3)
+* [React Hooks - Rocketseat](https://blog.rocketseat.com.br/react-hooks/)
+* [Habemus React Hooks](https://willianjusten.com.br/habemus-react-hooks/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Ferramentas
 
-## Learn More
+* [npm-scripts](https://docs.npmjs.com/misc/scripts)
+* [Babel](https://babeljs.io/)
+* [webpack](https://webpack.js.org/)
+* [Aphrodite](https://github.com/Khan/aphrodite)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### PWA
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [Seu primeiro Progressive Web App - Google
+  developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
+* [Progressive Web Apps -
+  codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
+* [offlinefirst.org](http://offlinefirst.org/)
+* [Usando Service Workers -
+  MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+* [Como habilitar dados sem conexão - Firebase
+  Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419) 
 
-### Code Splitting
+#### Serverless
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* [Serverless Framework 1.0 - Pagar.me Talks](https://www.youtube.com/watch?v=2oNovfw3V08)
+* [Firebase](https://firebase.google.com/)
+* [Serverless Architectures - Martin
+  Fowler](https://www.martinfowler.com/articles/serverless.html)
+ 
+## Checklist
 
-### Analyzing the Bundle Size
+### `README.md`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* [ ] Documentação do processo de design.
+* [ ] Inclui informações para desenvolvedores (dependências, instalação, uso, testes...)
 
-### Making a Progressive Web App
+#### HU
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### HU 1: Anotar pedidos
 
-### Advanced Configuration
+* [x] Digitar o nome do cliente.
+* [x] Filtrar _menu_ para _café da manhã_ e _almoço/jantar_.
+* [x] Adicionar item ao pedido.
+* [x] Excluir item do pedido.
+* [x] Mostrar _resumo_ do pedido com todos os itens e o total.
+* [x] Enviar para a cozinha (isso deve salvar o pedido).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Ferramentas utilizadas:
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- JavaScript (ES6);
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html);
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start);
+- [React Icons](https://react-icons.netlify.com/#/);
+- [Aphrodite](https://github.com/Khan/aphrodite);
+- [Firebase](https://firebase.google.com/);
+- [Figma](https://www.figma.com);
