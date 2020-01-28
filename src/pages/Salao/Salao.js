@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../../utils/configfirebase'
-import MenuCard from '../../components/MenuCard';
+import { db } from '../../utils/configfirebase';
+import MenuCard from '../../components/Cards/MenuCard';
 import Button from "../../components/Button/button";
-import MealCard from "../../components/TimeCard/MealTimeCard";
+import MealCard from "../../components/Cards/MealTimeCard";
 import Input from "../../components/Input/Input";
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 import { StyleSheet, css } from 'aphrodite';
 
 
@@ -94,11 +94,11 @@ function Salao()  {
         db.collection('Pedidos')
           .add({
             cliente: client,
-            Mesa: table,
-            Pedido: order,
+            mesa: table,
+            pedido: order,
             totalBill: total,
             status: 'Pedido em andamento',
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            time: new Date().toLocaleString('pt-BR'),
           })
           .then(() => {
             setOrder([]); 
@@ -117,6 +117,7 @@ function Salao()  {
           window.alert("Escolha o seu pedido")
        }
       }
+      console.log(menu);
 
     return( 
       <main className={css(styles.main)}>
@@ -138,16 +139,33 @@ function Salao()  {
       </div>
 
       <section>
-          <div>
+          {/* <div>
           {filterMeal().map((menuItem, index) =>
             <MenuCard key={index}
               id={menuItem.id}
               onClick={() => verifyOptions(menuItem)}
               name={menuItem.name}
+              img={menuItem.img}
               price={menuItem.price}
               options={menuItem.options}
               extra={menuItem.extra}
             />
+          )}
+        </div>  */}
+         <div>
+          {filterMeal().map((menuItem, index) =>
+            <MenuCard key={index}
+            id={menuItem.id} onClick={() => verifyOptions(menuItem)}>
+              
+              {/* {menuItem.id} */}
+              {menuItem.name}
+              <img width="100px" src={menuItem.img}/>
+              <p>{menuItem.price}, 00</p>
+              {/* {menuItem.extra}
+              {menuItem.options} */}
+              
+            
+            </MenuCard>
           )}
         </div> 
 
@@ -202,10 +220,12 @@ function Salao()  {
 
 const styles = StyleSheet.create({
   main: {
-    backgroundColor: '#A16703',
+    backgroundColor: '#EEC591',
     padding: '10px 0 0 0',
     width: '100vw',
-    height: '60vh',
+    height: '80vh',
+    overflow: 'auto'    
+    
   }
 })
 
