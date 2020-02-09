@@ -17,19 +17,22 @@ import { StyleSheet, css } from 'aphrodite';
 function MenuCard(props) {
     return(
     
-        <div  className={css(styles.imagem)} onClick={props.onClick}>
+        <div onClick={props.onClick} id={props.id} className={css(styles.imagem)}>
             {props.children}
         </div>
     )
 }
 
 const styles = StyleSheet.create({
-    imagem: {
-        
-      border: '1px solid black' 
-
-    }
-}
-)
+imagem: {
+        border: '4px solid black',
+        // display: 'flex',
+        margin: '10px',
+        ':hover': {
+        backgroundColor: 'black',
+        cursor: 'pointer'
+        },
+        }
+ });
 export default MenuCard;
 

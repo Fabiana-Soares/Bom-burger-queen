@@ -31,7 +31,7 @@ function Kitchen(){
                         status={ord.status}
                         pedido={ord.pedido.map((item,index) => (
                             <div key={index}>
-                              {item.count} x {item.name}
+                              {item.count} x {item.name}                              
                             </div>
                         ))}
                     />)}
@@ -43,7 +43,7 @@ function Kitchen(){
 
 const styles = StyleSheet.create({
     listKitchen: {
-      backgroundColor: '#EEC591',
+      backgroundColor: '#00000',
       padding: '10px 0 0 0',
       width: '100vw',
       height: '90.5vh',
