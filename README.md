@@ -28,7 +28,8 @@ O acordado abaixo deve acontecer para dizer que a história está terminada:
 ### Protótipos e layout
 Baseado nas necessidades do cliente, criamos um layout no qual pode-se visualizar todos os itens necessários e também à funcionalidade do botão (excluir, adicionar, etc).
 
-![MENU](src/img/prototipo.png)
+![MENU](src/img/kitchen.png)
+![MENU](src/img/salao.png)
 
 #### Framework / biblioteca
 
